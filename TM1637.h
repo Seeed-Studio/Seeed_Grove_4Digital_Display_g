@@ -51,7 +51,7 @@ class TM1637
     
 public:     // api for graphical programming project - loovee@2015-8-4
 
-    TM1637(){}
+    TM1637(){set(BRIGHTEST);}
     
     /*
      * Function Name: DigitDisplayWrite
@@ -67,10 +67,10 @@ public:     // api for graphical programming project - loovee@2015-8-4
         // init io
         Clkpin  = pinClk;
         Datapin = pinDta;
-        pinMode(Clkpin,OUTPUT);
-        pinMode(Datapin,OUTPUT);
+        pinMode(Clkpin, OUTPUT);
+        pinMode(Datapin, OUTPUT);
   
-        //clearDisplay();
+        
         
         if(num<10)
         {

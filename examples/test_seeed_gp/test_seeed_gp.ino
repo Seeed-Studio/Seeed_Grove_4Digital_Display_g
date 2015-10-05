@@ -17,6 +17,6 @@ void loop()
     for(int i=0; i<10000; i++)
     {
         led.DigitDisplayWrite(pinClk, pinDta, i);
-        delay(10);
+        delay(100);
     }
 }
