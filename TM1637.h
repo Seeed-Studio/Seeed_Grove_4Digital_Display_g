@@ -64,6 +64,10 @@ public:     // api for graphical programming project - loovee@2015-8-4
     {
         if(num>9999 || num<0)return;
         
+        static int num_buf = 0;
+        if(num == num_buf)return;
+        num_buf = num;
+
         // init io
         Clkpin  = pinClk;
         Datapin = pinDta;
@@ -98,7 +102,7 @@ public:     // api for graphical programming project - loovee@2015-8-4
             display(3, num%10);
             display(2, (num/10)%10);
             display(1, (num/100)%10);
-            display(1, (num/1000)%10);
+            display(0, (num/1000)%10);
         }
     }
 
